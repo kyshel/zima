@@ -1,0 +1,28 @@
+{
+	"name": "Zima",
+	"version": "0.1",
+	"description": "zima is a square that float on your page",
+  "icons": {
+    "16": "images/zima.jpg",
+    "32": "images/zima.jpg",
+    "48": "images/zima.jpg",
+    "128": "images/zima.jpg"
+  },
+
+  "permissions": [ "storage","tabs","activeTab"],
+  "manifest_version": 2,
+
+  "background": {
+    "scripts": ["background.js","lib/jquery-3.3.1.min.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+   {
+     "matches": ["<all_urls>"],
+     "js": ["lib/jquery-3.3.1.min.js","content.js"]
+   }
+ ]
+
+
+}
